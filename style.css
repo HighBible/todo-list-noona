@@ -1,7 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
   background: paleturquoise;
   background-size: cover;
+}
+
+button {
+  border: none;
+  background: none;
+  /* border: 2px solid rgb(6, 46, 46); */
+  width: 80px;
+  height: 50px;
 }
 
 .container {
@@ -9,6 +22,30 @@ body {
   min-height: 100vh;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
+
+#add-button {
+  width: 50px;
+  height: 30px;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+#add-button:hover {
+  background: burlywood;
+}
+
+#task-input {
+  margin: 10px;
+  vertical-align: middle;
+  width: 50vw;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+#task-input:focus-visible {
+  outline: none;
+}
+
 .task-area{
   border: 1px solid lightgray;
 }
@@ -36,5 +73,40 @@ body {
 .task {
   display: flex;
   justify-content: space-between;
-  padding: 1em
+  align-items: center;
+  padding: 1em;
+  gap: 1em
+}
+.btn_area {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.task-done {
+  text-decoration: line-through;
+  background: #ddd;
+  flex-grow: 1;
+  height: 50px;
+  line-height: 50px;
+}
+
+
+
+.btn_check:hover {
+  background-color: rgb(32, 206, 32);
+  border-color: green;
+}
+
+.btn_undo:hover {
+  background-color: rgb(166, 166, 166);
+  border-color: grey;
+}
+
+.btn_delete {
+  background: url(./images/delete.png) no-repeat 50% 50%
+}
+.btn_delete:hover {
+  background-color: rgb(245, 92, 92);
+  border-color: brown;
 }
